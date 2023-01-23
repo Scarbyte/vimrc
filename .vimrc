@@ -128,6 +128,9 @@ noremap <C-K> <C-W>k
 noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 
+" Stops search highlighting on return
+nnoremap <CR> :noh<CR><CR>
+
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
