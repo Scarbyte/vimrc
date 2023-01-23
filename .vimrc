@@ -77,8 +77,10 @@ set nowb
 set noswapfile
 
 " highlight text that is over 80 characters wide
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100)
+highlight ColorColumn ctermbg=darkgray
+" call matchadd('ColorColumn', '\%81v', 100)
+
+set colorcolumn=81
 
 " Status Line
 set laststatus=2
