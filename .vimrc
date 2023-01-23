@@ -52,6 +52,7 @@ set magic
 set showmatch
 set mat=2
 set foldcolumn=1
+set wildmenu
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLORS AND THEMES
