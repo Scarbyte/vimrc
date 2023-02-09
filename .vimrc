@@ -75,6 +75,8 @@ set cursorline
 set nobackup
 set nowb
 set noswapfile
+" Disable scratchpad window
+set completeopt-=preview
 
 " highlight text that is over 80 characters wide
 highlight ColorColumn ctermbg=darkgray
@@ -157,3 +159,4 @@ endif
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
+
