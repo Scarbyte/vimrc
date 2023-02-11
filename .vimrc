@@ -29,8 +29,8 @@ call vundle#end()
 let mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
-" :W - saves the file as sudo
-command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+" :WS - saves the file as sudo
+command! WS execute 'w !sudo tee % > /dev/null' <bar> edit!
 filetype plugin indent on
 set history=500
 set autoread
@@ -53,6 +53,7 @@ set showmatch
 set mat=2
 set foldcolumn=1
 set wildmenu
+set completeopt-=preview
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLORS AND THEMES
@@ -75,8 +76,6 @@ set cursorline
 set nobackup
 set nowb
 set noswapfile
-" Disable scratchpad window
-set completeopt-=preview
 
 " highlight text that is over 80 characters wide
 highlight ColorColumn ctermbg=darkgray
@@ -139,7 +138,8 @@ nnoremap <CR> :noh<CR><CR>
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
+map <leader>tmh :tabmove -1
+map <leader>tml :tabmove +1
 map <leader>t<leader> :tabnext<cr>
 " Opens a new tab with the current buffer's path
 map <leader>te :tabedit <C-r>=escape(expand("%:p:h"), " ")<cr>/
@@ -159,4 +159,3 @@ endif
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
-
